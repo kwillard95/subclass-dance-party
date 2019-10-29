@@ -23,6 +23,7 @@ makeColorDancer.prototype.setColor = function () {
   let blueValue = Math.floor((Math.random() * 256));
   var color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
   this.$node.css('border', '20px solid ' + color);
+  this.$node.css('border-radius', '10px');
 
 };
 

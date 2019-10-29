@@ -16,15 +16,10 @@ makeDancer.prototype.step = function () {
 
 
 makeDancer.prototype.setPosition = function (top, left) {
-   // Use css top and left properties to position our <span> tag
-  // where it belongs on the page. See http://api.jquery.com/css/
-  //
   var styleSettings = {
     top: top,
     left: left
   };
   this.$node.css(styleSettings);
-  this.$node.css('border', '10px solid ' + 'rgb(150, 15, 15)');
-  this.$node.css('border-radius', '10px');
 };
 
