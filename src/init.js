@@ -38,11 +38,31 @@ $(document).ready(function() {
   $('.lineUp').on('click', function(event) {
 
     var organizeDancers = function() {
+
+      var dancerId = 1;
+      var topCount = 30;
+
+      var styleSettings = {
+        top: topCount + 'px',
+        left: '150px'
+      };
+
       var dancers = window.dancers.slice();
       var firstHalf = dancers.splice(0, Math.floor(dancers.length / 2));
       var lastHalf = dancers;
-
+      debugger;
+      for (var i = 0; i < firstHalf.length; i++) {
+        var stringId = '#a' + dancerId.toString();
+        firstHalf[i].id = stringId;
+        $(stringId).css('top', topCount + 'px');
+        $(stringId).css('left', '150 px');
+        topCount += 30;
+        dancerId++;
+        // .append(firstHalf[i]);
+      }
     };
+    organizeDancers();
+
 
   });
 

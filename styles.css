@@ -1,4 +1,5 @@
 body, html{
+  background-image: url('./src/rick_morty.png');
   height:100%;
 }
 body{
@@ -22,7 +23,5 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  /* border:10px solid rgb(150, 15, 15);
-  border-radius:10px; */
   position:absolute;
 }

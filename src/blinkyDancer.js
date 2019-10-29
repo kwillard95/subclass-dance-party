@@ -1,23 +1,20 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.char();
+  this.step();
+  this.cuteImage();
 
 };
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 makeBlinkyDancer.prototype.step = function() {
-  // call the old version of step at the beginning of any call to this new version of step
-  // this.oldVersion();
   makeDancer.prototype.step.call(this);
-  this.$node.toggle();
-  // toggle() is a jQuery method to show/hide the <span> tag.
-  // See http://api.jquery.com/category/effects/ for this and
-  // other effects you can use on a jQuery-wrapped html tag.
+  this.$node.fadeIn(1000);
+  this.$node.fadeOut(1000);
 };
 
-makeBlinkyDancer.prototype.char = function() {
-  this.$node.css('border', '10px solid ' + 'rgb(150, 15, 15)');
-  this.$node.css('border-radius', '10px');
-};
 
+makeBlinkyDancer.prototype.cuteImage = function() {
+  var imageUrl = 'https://media0.giphy.com/media/Q6x7wJ2vlP5E1MUn4E/source.gif';
+  this.$node.html('<img src =' + imageUrl + ' width= "200" height= "200">');
+};
