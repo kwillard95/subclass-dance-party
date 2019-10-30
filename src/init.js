@@ -43,16 +43,10 @@ $(document).ready(function() {
 
     };
     organizeDancers();
-
-
   });
 
-  $('.ghosting').on( 'click', function() {
-    debugger;
-    makeDancer.prototype.step.call(this);
-    var danceLength = Math.random() * 600;
-    $('.ghosting').animate({ 'left': '+= ' + danceLength }, 1000 );
-    $('.ghosting').animate({ 'left': '-=' + danceLength}, 1000 );
-  });
+  var ghosting = $('.ghosting');
+
+  
 
 });
